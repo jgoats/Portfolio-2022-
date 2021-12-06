@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.btn {
+    @apply shadow-md py-3 px-6 rounded-md transition duration-300
+}
+.btn-primary {
+ @apply bg-indigo-900 text-white
+}
+.btn-secondary {
+@apply bg-green-400 text-black
+}
+
