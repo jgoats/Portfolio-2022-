@@ -1,0 +1,8 @@
+.elementOne {
+    transform : translateY(250%);
+    border-radius : 0 50% 50% 0;
+}
+.elementTwo {
+    transform : translateY(50%);
+    border-radius : 50% 0 0 50%;
+}
