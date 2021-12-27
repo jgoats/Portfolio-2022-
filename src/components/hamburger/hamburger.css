@@ -1,0 +1,34 @@
+.hamburger {
+    width : 30px;
+    height : 30px;
+    margin-left : 5rem;
+    transform : translateX(-50%) translateY(-0.3rem);
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+.hamburger-item-white {
+    position : relative;
+    border-bottom : 2px solid white;
+    padding-bottom : 5px;
+    position : relative;
+    top : -3px;
+}
+.hamburger-item-black {
+    position : relative;
+    border-bottom : 2px solid black;
+    padding-bottom : 5px;
+    position : relative;
+    top : -3px;
+}
+@keyframes slide {
+    from {transform : translateX(-100%)}
+    to {transform : translateX(0%)}
+}
+.hamburger-slider {
+    transform : translateX(-100%);
+}
+.hamburger-slider-active {
+    animation : slide 0.3s 1;
+    transform : translateX(0%);
+}

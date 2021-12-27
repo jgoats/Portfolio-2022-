@@ -1,0 +1,21 @@
+.hero {
+    filter : grayscale(.60) opacity(.40)
+}
+/*
+.greeting-container {
+   
+}*/
+.justin-photo {
+    width : 10rem;
+    height : 10rem;
+    filter : opacity(.9) grayscale(.10);
+}
+/*
+.greeting {
+    
+}*/
+.down-arrow {
+    width : 3rem;
+    height : 3rem;
+    margin-top : 2rem;
+}
