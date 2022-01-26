@@ -36,7 +36,7 @@ export default class App extends React.Component {
         let options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.05
+            threshold: 0.05,
         }
 
         let observer = new IntersectionObserver(this.intersectionCallback, options);
