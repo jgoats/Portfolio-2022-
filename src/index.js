@@ -16,10 +16,11 @@ export default class App extends React.Component {
             nav: ["nav", "nav-item", "hamburger-item-white"]
         }
         this.intersectionCallback = this.intersectionCallback.bind(this);
+        this.scrollObject = React.createRef();
     }
     intersectionCallback(entries) {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.target.classList.contains("scroll-object") && entry.isIntersecting) {
                 this.setState({
                     nav: ["animate-nav", "nav-item-animate", "hamburger-item-black"]
                 })
@@ -31,6 +32,18 @@ export default class App extends React.Component {
             }
         });
     }
+    componentDidMount() {
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.05
+        }
+
+        let observer = new IntersectionObserver(this.intersectionCallback, options);
+
+        let target = this.scrollObject.current;
+        observer.observe(target);
+    }
 
     render() {
         return (
@@ -38,9 +51,9 @@ export default class App extends React.Component {
                 <Hero />
                 <Nav nav={this.state.nav} />
                 <Hamburger nav={this.state.nav} />
-                <div className="scroll-object absolute w-full h-full">
-                    <AboutMe intersectionCallback={this.intersectionCallback} />
-                    <Projects intersectionCallback={this.intersectionCallback} />
+                <div ref={this.scrollObject} className="scroll-object absolute border-2 border-green-400 w-full">
+                    <AboutMe />
+                    <Projects />
                 </div>
             </div>
 
