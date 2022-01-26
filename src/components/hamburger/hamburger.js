@@ -50,8 +50,8 @@ export default class Hamburgernav extends Component {
                 <div onClick={(e) => this.closeHamburgerOnClick(e)} className={`${this.state.hamburgerSlider} flex md:hidden items-center justify-center right-0 z-0 w-full bg-black opacity-95 h-screen absolute`}>
                     <ul className="flex flex-col gap-12">
                         <li onClick={this.handleLink} className={`text-white text-center`}>about me</li>
-                        <li onClick={this.handleLink} className={`text-white text-center`}>skills</li>
                         <li onClick={this.handleLink} className={`text-white text-center`}>projects</li>
+                        <li onClick={this.handleLink} className={`text-white text-center`}>blog</li>
                         <li onClick={this.handleLink} className={`text-white text-center`}>contact me</li>
                     </ul>
                 </div>
