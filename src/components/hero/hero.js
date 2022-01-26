@@ -18,7 +18,7 @@ export default function Hero() {
             </section>
             <div className="absolute left-0 greeting-container w-full h-full flex flex-col gap-10 justify-center items-center">
                 <img className=" relative justin-photo block rounded-full border-2 border-white" src={Justin} />
-                <h1 className=" relative greeting block text-white text-center text-3xl">Hi, my name is Justin Goats and i'm a web developer</h1>
+                <h1 className=" relative greeting block text-white text-center text-3xl">Hi, I am Justin Goats</h1>
                 <img className="relative down-arrow animate-bounce bottom-0" src={DownArrow} />
             </div>
         </div>
