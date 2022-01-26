@@ -1,0 +1,44 @@
+.card {
+    min-width : 300px;
+    background-size : cover;
+    background-position: center;
+    max-width : 300px;
+    filter : contrast(1.0);
+    height : 100%;
+}
+.card-heading {
+    border-left : 1px solid gray;
+    border-right : 1px solid gray;
+    border-top : 1px solid gray;
+    color : black;
+    background-color : white;
+}
+.icon {
+    background-color : #f5b353;
+}
+.card-btn-container {
+    border-left : 1px solid gray;
+    border-right : 1px solid gray;
+    border-bottom : 1px solid gray;
+
+}
+.card-description {
+   color : black;
+   border-left : 1px solid gray;
+   border-right : 1px solid gray;
+}
+.card-img {
+   height : 6rem;
+   border-left : 1px solid gray;
+   border-right : 1px solid gray;
+   border-bottom : 1px solid gray;
+}
+.card-btn {
+    color : white;
+    border-radius : 5px;
+    padding : 3px 5px 3px 5px;
+}
+.bitcoin-icon {
+    width : 40px;
+    height : 40px;
+}
