@@ -1,44 +1,136 @@
-.card {
+.projects-container {
+padding : 5rem;
+background-color : whitesmoke;
+}
+.main-card-container {
+   display : grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   grid-template-rows: auto;
+   grid-gap : 5rem;
+}
+.card-container {
+    position : relative;
+    height : 400px;
     min-width : 300px;
-    background-size : cover;
-    background-position: center;
-    max-width : 300px;
-    filter : contrast(1.0);
-    height : 100%;
+    border-radius : 5px;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    flex-direction: column;
+    background-color : rgb(0, 0, 0);
+    box-shadow : 2px 2px 3px black;
+}
+.date-container {
+    height : 2rem;
+    background-color : whitesmoke;
+    width : 100%;
+    display : flex;
+    justify-content: space-around;
+    align-items : center;
 }
 .card-heading {
-    border-left : 1px solid gray;
-    border-right : 1px solid gray;
-    border-top : 1px solid gray;
-    color : black;
-    background-color : white;
+    position : absolute;
+    top : 0;
+    border-radius : 5px 5px 0px 0px;
+    background-color : black;
+    box-shadow : 0px 0px 2px white;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    height : 2rem;
+    color : white;
+    text-align : center;
+    width : 100%;
 }
-.icon {
-    background-color : #f5b353;
+.card-image {
+    height : 250px;
+    max-width : 290px;
+    width : 290px;
+    position : absolute;
+    top : calc(0% + 2.5rem);
+    border-radius : 5px;
+}
+.card-image-btn-container {
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    height : 50px;
+    grid-gap : 2rem;
+    position : absolute;
+    top : calc(2.5rem + 250px);
+}
+.card-image-btn {
+    background-color : white;
+    width : 15px;
+    border-radius : 50%;
+    height : 15px;
+    box-shadow : 0px 0px 3px black;
+}
+.card-image-btn-active {
+    background-color : black;
+    width : 15px;
+    border-radius : 50%;
+    height : 15px;
+    box-shadow : 0px 0px 5px white;
+    transition : 0.2s ease-in;
+}
+.card-image-btn:hover {
+    cursor: pointer;
+}
+.card-image-btn-active:hover {
+   cursor: pointer;
 }
 .card-btn-container {
-    border-left : 1px solid gray;
-    border-right : 1px solid gray;
-    border-bottom : 1px solid gray;
-
-}
-.card-description {
-   color : black;
-   border-left : 1px solid gray;
-   border-right : 1px solid gray;
-}
-.card-img {
-   height : 6rem;
-   border-left : 1px solid gray;
-   border-right : 1px solid gray;
-   border-bottom : 1px solid gray;
+    height : 4rem;
+    background-color : black;
+    display : flex;
+    align-items : center;
+    justify-content: space-around;
+    position : absolute;
+    bottom : 0;
+    width : 100%;
+    border-radius : 0px 0px 5px 5px;
+    color : white;
+    box-shadow : 0px 0px 1px white;
 }
 .card-btn {
-    color : white;
+    background-color : black;
     border-radius : 5px;
-    padding : 3px 5px 3px 5px;
+    padding : 5px;
 }
-.bitcoin-icon {
-    width : 40px;
-    height : 40px;
+.card-btn:hover {
+    transition : 0.3s ease-in;
+    background-color : rgb(42, 15, 92);
+    cursor: pointer;
+}
+@media screen and (max-width : 640px) {
+    .projects-container {
+        padding : 1rem;
+        background-color : whitesmoke;
+        }
+}
+@media screen and (max-width : 400px) {
+    .projects-container {
+        padding : 10px;
+        background-color : whitesmoke;
+        }
+        .card-image {
+            height : 250px;
+            width : 220px;
+            position : absolute;
+            top : calc(0% + 2.5rem);
+            border-radius : 5px;
+        }
+        .card-container {
+            position : relative;
+            height : 400px;
+            min-width : 250px;
+            border-radius : 5px;
+            display : flex;
+            justify-content: center;
+            align-items : center;
+            flex-direction: column;
+            background-color : rgb(0, 0, 0);
+            box-shadow : 2px 2px 3px black;
+        }
 }
