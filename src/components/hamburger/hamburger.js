@@ -30,7 +30,8 @@ export default class Hamburgernav extends Component {
     closeHamburgerOnClick(e) {
         e.stopPropagation();
         this.setState({
-            hamburgerSlider: "hamburger-slider"
+            hamburgerSlider: "hamburger-slider",
+            hamburgerToggle: this.state.hamburgerToggle -= 1
         })
     }
     handleLink() {
@@ -41,17 +42,16 @@ export default class Hamburgernav extends Component {
     }
     render() {
         return (
-            <div className="hamburger-container md:w-10 w-full fixed z-10 top-0 h-screen flex">
-                <div ref={this.hamburger} onClick={(e) => this.handleHamburger(e)} className={`hamburger mt-7 md:hidden z-10 relative block`}>
+            <div className="md:w-10 w-full z-30 top-0 fixed flex">
+                <div ref={this.hamburger} onClick={(e) => this.handleHamburger(e)} className={`hamburger mt-7 md:hidden z-30 relative block`}>
                     <div className={this.state.hamburgerToggle <= 0 ? this.props.nav[2] : "hamburger-item-white"}></div>
                     <div className={this.state.hamburgerToggle <= 0 ? this.props.nav[2] : "hamburger-item-white"}></div>
                     <div className={this.state.hamburgerToggle <= 0 ? this.props.nav[2] : "hamburger-item-white"}></div>
                 </div>
-                <div onClick={(e) => this.closeHamburgerOnClick(e)} className={`${this.state.hamburgerSlider} flex md:hidden items-center justify-center right-0 z-0 w-full bg-black opacity-95 h-screen absolute`}>
+                <div onClick={(e) => this.closeHamburgerOnClick(e)} className={`${this.state.hamburgerSlider} flex md:hidden items-center justify-center right-0 w-full bg-black opacity-95 h-screen fixed`}>
                     <ul className="flex flex-col gap-12">
                         <li onClick={this.handleLink} className={`text-white text-center`}>about me</li>
                         <li onClick={this.handleLink} className={`text-white text-center`}>projects</li>
-                        <li onClick={this.handleLink} className={`text-white text-center`}>blog</li>
                         <li onClick={this.handleLink} className={`text-white text-center`}>contact me</li>
                     </ul>
                 </div>

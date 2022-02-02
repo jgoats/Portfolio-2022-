@@ -27,8 +27,18 @@
 }
 .hamburger-slider {
     transform : translateX(-100%);
+    display : none;
+    
 }
 .hamburger-slider-active {
     animation : slide 0.3s 1;
     transform : translateX(0%);
+}
+@media screen and (max-width : 400px) {
+    .hamburger {
+        width : 30px;
+        height : 30px;
+        margin-left : 3rem;
+        transform : translateX(-50%) translateY(-0.3rem);
+    }
 }
